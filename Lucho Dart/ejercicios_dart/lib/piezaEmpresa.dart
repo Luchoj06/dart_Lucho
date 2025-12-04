@@ -5,5 +5,18 @@ cuánto será el desperdicio.*/
 
 void main (){
 
+   double largoLam = 4.0; 
+  double anchoLam = 1.5; 
+  double areaLam = largoLam * anchoLam;
+
+  double areaPieza = 0.5; // m^2 por pieza
+
+ int piezas = (areaLam ~/ areaPieza); // división entera
+  double desperdicio = areaLam - piezas * areaPieza;
+
+  print('Área lámina: ${areaLam.toStringAsFixed(2)} m^2');
+  print('Área por pieza: ${areaPieza.toStringAsFixed(2)} m^2');
+  print('Piezas obtenidas: $piezas');
+  print('Desperdicio (m^2): ${desperdicio.toStringAsFixed(2)}');
 
 }
